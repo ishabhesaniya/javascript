@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ONChange Event</h2>
+     <select id="myselect" onchange="myfunction()">
+        <option value="Chocolate">Chocolate</option>
+        <option value="Hershey's">Hershey's</option>
+        <option value="Amul">Amul</option>
+        <option value="Cadbury ">Cadbury </option>
+        <option value="Dairy milk">Dairy milk</option>
+    </select>
+    <p id="demo"></p>
+
+    <h2>onmouseover Event</h2>
+    <p id="demo1"></p>
+
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="Smiley_face.jpg" alt="Smiley" width="40" height="40">
+</body>
+<script>
+    function myfunction (){
+        var y=document.getElementById('myselect').value;
+        document.getElementById('demo').innerHTML = "You Selected : " + y ;
+    }
+    function bigImg(x) {
+        x.style.height = "70px";
+        x.style.width = "70px";
+}
+
+function normalImg(x) {
+  x.style.height = "40px";
+  x.style.width = "40px";
+}
+</script>
+</html>
