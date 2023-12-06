@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Number and String</h2>
+    <p id="demo"></p>
+
+    <h2>String</h2>
+    <p id="demo1"></p>
+
+    <h2>Boolean</h2>
+    <p id="demo2"></p>
+
+    <h2>Array</h2>
+    <p id="demo3"></p>
+
+    <h2>Object</h2>
+    <p id="demo4"></p>
+
+    <h2>Type of</h2>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+</body>
+<script>
+    let x = 16 + "Car";
+    document.getElementById('demo').innerHTML=x;
+
+    let ans1 = "Hello";
+    let ans2 = "He is called 'Johnny'";
+    let ans3 = "He is called 'Johnny'";
+
+    document.getElementById('demo1').innerHTML= ans1 + "<br>" + ans2 + "<br>" +ans3;
+
+    let y=5;
+    let z=5;
+    let a=6;
+    document.getElementById('demo2').innerHTML= (y == z) + "<br>" + (a == z);
+
+    const cars=["saab","Volvo","BMW"];
+    document.getElementById('demo3').innerHTML=cars + "<br>" + cars[1];
+
+    const person = {
+        FristName : "John",
+        LastName : "Doe",
+        age : 45,
+        eyecolor : "blue"
+    };
+    document.getElementById('demo4').innerHTML= person.FristName  + " is " + person.age + " Years old.";
+
+    document.getElementById('demo5').innerHTML = typeof "" + "<br>" + typeof "Jhon";
+
+    document.getElementById('demo6').innerHTML = typeof 55 + "<br>" + typeof 35.23;
+
+
+
+</script>
+</html>

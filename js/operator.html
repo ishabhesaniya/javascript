@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operators</h1>
+    <form>
+        1st Number : <input type="text" id="firstNumber" /><br><br>
+        2nd Number: <input type="text" id="secondNumber" /><br><br>
+        <input type="button" onClick="additionBy()" Value="Addition" />
+        <input type="button" onClick="subBy()" Value="Subtraction" />
+        <input type="button" onClick="mulBy()" Value="Multiplication" />
+        <input type="button" onClick="divBy()" Value="Division" />
+        <input type="button" onClick="modBy()" Value="Modulus" />
+
+        </form>
+        <p>The Result is : <br>
+        <span id = "result"></span>
+        </p>
+        
+</body>
+<script>
+    function additionBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 + num2;
+}
+function subBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 - num2;
+}
+function mulBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 * num2;
+}
+function divBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 / num2;
+}
+function modBy() {
+    num1 = document.getElementById("firstNumber").value;
+    num2 = document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML = num1 % num2;
+}
+</script>
+</html>
