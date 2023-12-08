@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>For Loop</h2>
+    <p id="demo"></p>
+
+    <h2>For loop of</h2>
+    <p id="demo1"></p>
+
+    <h2>While loop</h2>
+    <p id="demo2"></p>
+</body>
+<script>
+    const cars=["BMW","Volvo","Saab","Ford"];
+    let i, len , text;
+    for (i = 0, len = cars.length, text= "";  i< len; i++){
+        text +=cars[i] +"<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+
+    let language = "JavaScript";
+
+let text1 = "";
+for (let x of language) {
+  text1 += x + "<br>";
+}
+
+document.getElementById("demo1").innerHTML = text1;
+
+
+let text3 = ""
+let a = 0;
+
+do {
+  text3 += "<br>The number is " + a;
+  a++;
+}
+while (a < 10);  
+
+document.getElementById("demo2").innerHTML = text3;
+</script>
+</html>
