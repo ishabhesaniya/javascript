@@ -19,21 +19,31 @@
     <h2>onmouseover Event</h2>
     <p id="demo1"></p>
 
-    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="Smiley_face.jpg" alt="Smiley" width="40" height="40">
+    <h2>onkeydown Event</h2>
+    <p id="demo2"></p>
+    <input type="text" onkeydown="myfunction()">
+
+    <!-- <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="Smiley_face.jpg" alt="Smiley" width="40" height="40"> -->
 </body>
 <script>
     function myfunction (){
         var y=document.getElementById('myselect').value;
         document.getElementById('demo').innerHTML = "You Selected : " + y ;
     }
-    function bigImg(x) {
-        x.style.height = "70px";
-        x.style.width = "70px";
-}
+  
+ function myfunction() {
+    document.getElementById('demo2').innerHTML=" Hello";
+ }
 
-function normalImg(x) {
-  x.style.height = "40px";
-  x.style.width = "40px";
-}
+//  function bigImg(x) {
+//         x.style.height = "70px";
+//         x.style.width = "70px";
+// }
+
+// function normalImg(x) {
+//   x.style.height = "40px";
+//   x.style.width = "40px";
+// }
+
 </script>
 </html>
