@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>This keyword</h2>
+    <p id="demo"></p>
+
+    <h2>Class</h2>
+    <p id="demo1"></p>
+</body>
+<script>
+    const person={
+        FristName: " John",
+        LastName: "Doe",
+        id: 101,
+        fullname : function(){
+            return this.FristName + " " + this.LastName;
+        }
+    };
+    document.getElementById('demo').innerHTML=person.fullname();
+
+    class car{
+        constructor(name, year){
+            this.name = name;
+            this.year = year;
+        }
+    }
+    const mycar1 = new car("Volvo",2015);
+    const mycar2 = new car("BMW",2020);
+    document.getElementById('demo1').innerHTML = mycar1.name + " "+mycar2.name;
+</script>
+</html>
