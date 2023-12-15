@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>1. Only For Name</h2>
+    <p id="demo"></p>
+
+    <hr>
+    <h2>2. departments id</h2>
+    <p id="demo1"></p>
+
+    <hr>
+    <h2>3. departments Name</h2>
+    <p id="demo2"></p>
+
+    <hr>
+    <h2>4. departments in employees id</h2>
+    <p id="demo3"></p>
+
+    <hr>
+    <h2>5. departments in employees Name</h2>
+    <p id="demo4"></p>
+
+    <hr>
+    <h2>6. departments in employees Salary</h2>
+    <p id="demo5"></p>
+
+    <hr>
+    <h2>7. departments in employees Position</h2>
+    <p id="demo6"></p>
+
+    <hr>
+    <h2>8. departments in employees Project</h2>
+    <p id="demo7"></p>
+
+    <hr>
+    <h2>9. departments in employees id and name</h2>
+    <p id="demo8"></p>
+
+    <hr>
+    <h2>10. departments in employees total Salary</h2>
+    <p id="demo9"></p>
+
+    <hr>
+    <h2>11. departments in employees all Id displya</h2>
+    <p id="demo10"></p>
+
+    <hr>
+    <h2>12. departments in employees all name displya</h2>
+    <p id="demo11"></p>
+
+    <hr>
+    <h2>13. departments in employees all Salary displya</h2>
+    <p id="demo12"></p>
+
+    <h2>14. departments in employees all Position displya</h2>
+    <p id="demo13"></p>
+</body>
+<script>
+    company = [{
+        name: "TechCorp",
+        location: "Silicon Valley",
+        departments: [
+            {
+                id: 1,
+                name: "Engineering",
+                employees: [
+                    {
+                        id: 101,
+                        name: "John Doe",
+                        position: "Software Engineer",
+                        salary: 100000,
+                        projects: ["ProjectA", "ProjectB"]
+                    },
+                    {
+                        id: 102,
+                        name: "Jane Smith",
+                        position: "Data Scientist",
+                        salary: 120000,
+                        projects: ["Project15", "Project"]
+                    },
+                    {
+                        id: 103,
+                        name: "Ram Sharma",
+                        position: "Data Scientist",
+                        salary: 150000,
+                        projects: ["ProjectB"]
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: "Marketing",
+                employees: [
+                    {
+                        id: 201,
+                        name: "Bob Johnson",
+                        position: "Marketing Manager",
+                        salary: 90000,
+                        projects: ["ProjectC", "ProjectD"]
+                    },
+                    {
+                        id: 202,
+                        name: "Alice Brown",
+                        position: "Content Writer",
+                        salary: 80000,
+                        projects: ["ProjectD"]
+                    }
+                ]
+            },
+
+            {
+                id: 3,
+                name: "Web Devloper",
+                employees: [
+                    {
+                        id: 301,
+                        name: "Sita Sharma",
+                        position: "FullStack",
+                        salary: 50000,
+                        projects: ["ProjectC", "ProjectD"]
+                    },
+                    {
+                        id: 302,
+                        name: "Laxman Sharma ",
+                        position: "Content Writer",
+                        salary: 70000,
+                        projects: ["ProjectD"]
+                    }
+                ]
+            },
+            {
+                id: 4,
+                name: "Tata",
+                employees: [
+                    {
+                        id: 401,
+                        name: "isha Bhesaniya",
+                        position: "Finacials",
+                        salary: 50000,
+                        projects: ["ProjectC", "ProjectD"]
+                    },
+                    {
+                        id: 402,
+                        name: "Hiren Kuvariya",
+                        position: "Blended Cement",
+                        salary: 70000,
+                        projects: ["ProjectD"]
+                    }
+                ]
+            },
+            {
+                id: 5,
+                name: "Jays Shree Texties",
+                employees: [
+                    {
+                        id: 501,
+                        name: "Prince Bhesaniya",
+                        position: "Finacials",
+                        salary: 50000,
+                        projects: ["ProjectC", "ProjectD"]
+                    },
+                    {
+                        id: 502,
+                        name: "Hardik Kuvariya",
+                        position: "Blended Cement",
+                        salary: 70000,
+                        projects: ["ProjectD"]
+                    }
+                ]
+            }
+        ]
+    }
+    ]
+
+    console.log("Name:", company[0].name)
+    document.getElementById("demo").innerHTML = company[0].name;
+
+    var deptid = company[0].departments.map(
+        function (a) {
+            return a.id;
+        }
+    )
+    console.log("id", deptid);
+    document.getElementById("demo1").innerHTML = deptid;
+
+    var deptname = company[0].departments.map(
+        function (b) {
+            return b.name
+        }
+    )
+    console.log("Name", deptname);
+    document.getElementById("demo2").innerHTML = deptname;
+
+    var deptemp = company[0].departments[0].employees.map(
+        function (c) {
+            return c.id
+        }
+    )
+    console.log("Employees id", deptemp);
+    document.getElementById("demo3").innerHTML = ("Employee id", deptemp)
+
+    var deptempname = company[0].departments[0].employees.map(
+        function (d) {
+            return d.name
+        }
+    )
+    console.log("Employee Name", deptempname);
+    document.getElementById("demo4").innerHTML = ("Employee Name", deptempname)
+
+    var deptempsal = company[0].departments[0].employees.map(
+        function (e) {
+            return e.salary
+        }
+    )
+    console.log("Employees Salary", deptempsal);
+    document.getElementById("demo5").innerHTML = deptempsal;
+
+    var deptemppos = company[0].departments[0].employees.map(
+        function (f) {
+            return f.position
+        }
+    )
+    console.log("Employees Position", deptemppos);
+    document.getElementById("demo6").innerHTML = deptemppos;
+
+    var deptemppro = company[0].departments[0].employees.map(
+        function (g) {
+            return g.projects
+        }
+    )
+    console.log("Employe Projrcts", deptemppro);
+    document.getElementById("demo7").innerHTML = deptemppro;
+
+    var deptinfo = company[0].departments[0].employees.map(
+        function (dept) {
+            return [dept.id, dept.name, dept.salary, "<br>"]
+        });
+    console.log("Employee id and name", deptinfo);
+    document.getElementById("demo8").innerHTML = deptinfo;
+
+    var deptsall = company[0].departments[0].employees.reduce((acc, val) => acc + val.salary, 0);
+    console.log("Sum of salary", deptsall);
+    document.getElementById("demo9").innerHTML = deptsall;
+
+
+    function getAllEmployeeIds(companyData) {
+        const result = [];
+
+        for (const department of companyData[0].departments) {
+            for (const employee of department.employees) {
+                result.push(employee.id);
+            }
+        }
+
+        return result;
+    }
+    const allEmployeeIds = getAllEmployeeIds(company);
+    console.log(allEmployeeIds);
+    document.getElementById("demo10").innerHTML=allEmployeeIds;
+
+
+    function getallname(companyD){
+        const result =[];
+        for(const department of companyD[0].departments){
+            for (const employee of department.employees){
+                result.push(employee.name);
+            }
+        }
+        return result;
+    }
+    const allemployename = getallname(company);
+    console.log(allemployename);
+    document.getElementById("demo11").innerHTML=allemployename;
+
+    function allsal (p){
+        const result =[];
+        for(const y of p[0].departments){
+            for (const emp of y.employees){
+                result.push(emp.salary)
+            }
+        }
+        return result;
+    }
+    const getsal = allsal(company);
+    console.log("All Employees Salary",getsal);
+    document.getElementById("demo12").innerHTML=getsal;
+
+    function allpos (l){
+        const result =[];
+        for(const z of l[0].departments){
+            for (const emp of z.employees){
+                result.push(emp.position)
+            }
+        }
+        return result;
+    }
+    const getpos = allpos(company);
+    console.log("All Employees Salary",getpos);
+    document.getElementById("demo13").innerHTML=getpos;
+
+</script>
+
+</html>

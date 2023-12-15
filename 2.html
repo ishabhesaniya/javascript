@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2></h2>
+    <p id="demo"></p>
+
+    <h2>Show marks of whose email address is malharvyas@google.com.</h2>
+    <p id="demo1"></p>
+</body>
+<script>
+    result = [
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Reema",
+        lastname: "Maheta",
+        emailId: "reemamaheta@google.com",
+        birthdate: '29 - 02 - 2002',
+        image: "",
+      subjects: {
+            mathematics: 68,
+            science: 84,
+            gujarati: 95,
+            socialscience: 76,
+            english: 85
+        }
+    },
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Maya",
+        lastname: "Thakur",
+        emailId: "mayathakur@google.com",
+        birthdate: '30-02-2002',
+        image: "",
+        subjects: {
+            mathematics: 62,
+            science: 84,
+            gujarati: 65,
+            socialscience: 74,
+            english: 95
+        }
+    },
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Malhar",
+        lastname: "Vyas",
+        emailId: "malharvyas@google.com",
+        birthdate: '28- 02 -2002',
+        image: "",
+        subjects: {
+            mathematics: 61,
+            science: 95,
+            gujarati: 54,
+            socialscience: 55,
+            english: 84
+        }
+    }
+]
+
+
+const studentNames = result.map(student => `${student.firstname} ${student.lastname}`)+'<br>';
+document.getElementById('demo').innerHTML = "First names and last names of all students:<br>" + studentNames;
+
+
+ const names = result.map(student => `${student.firstname} ${student.lastname}`);
+  console.log("Names of all students:", names);
+
+  const myJSON = JSON.stringify(result.subjects);
+document.getElementById("demo1").innerHTML = myJSON;
+
+
+</script>
+</html>

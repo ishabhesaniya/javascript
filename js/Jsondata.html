@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>1. Find the second index data of the result</h2>
+    <p id="demo"></p>
+
+    <h2>2. Get the first name and last names of all students</h2>
+    <p id="demo1"></p>
+</body>
+<script>
+    result = [
+        {
+            Id: "62cb82b136bb23650d33c90",
+            firstname: "Reema",
+            lastname: "Maheta",
+            emailId: "reemamaheta@google.com",
+            birthdate: "29 - 02 - 2002",
+            image: "",
+            subjects: {
+                mathematics: 68,
+                science: 84,
+                gujarati: 95,
+                socialscience: 76,
+                english: 85
+            }
+        },
+        {
+            Id: "62cb82b136bb23650d33c90",
+            firstname: "Maya",
+            lastname: "Thakur",
+            emailId: "mayathakur@google.com",
+            birthdate: "30 - 02 - 2002",
+            image: "",
+            subjects: {
+                mathematics: 62,
+                science: 84,
+                gujarati: 65,
+                socialscience: 74,
+                english: 95
+            }
+        },
+        {
+            Id: "62cb82b136bb23650d33c90",
+            firstname: "Malhar",
+            lastname: "Vyas",
+            emailId: "malharvyas@google.com",
+            birthdate: "28 - 02 - 2002",
+            image: "",
+            subjects: {
+                mathematics: 61,
+                science: 95,
+                gujarati: 54,
+                socialscience: 55,
+                english: 84
+            }
+        }
+    ]
+
+    var secondIndexData = result[1];
+
+
+    var id = secondIndexData.Id;
+    var firstName = secondIndexData.firstname;
+    var lastName = secondIndexData.lastname;
+    var email = secondIndexData.emailId;
+    var birthdate = secondIndexData.birthdate;
+    var image = secondIndexData.image;
+    var subjects = secondIndexData.subjects;
+    document.getElementById("demo").innerHTML = "seconde Index Data : " + "<br> " + secondIndexData.Id + "<br> " + firstName
+        + " " + lastName + "<br>" + email + "<br>" + birthdate + "<br>" + image + "<br>" + subjects.mathematics + "<br>" + subjects.science
+        + "<br>" + subjects.gujarati + "<br>" + subjects.socialscience + "<br>" + subjects.english;
+    console.log("seconde Index Data", secondIndexData);
+
+    const names = result.map(student => `${student.firstname} ${student.lastname}`);
+    console.log("Names of all students:", names);
+    document.getElementById("demo1").innerHTML = names;
+
+
+    var targetEmail = "malharvyas@google.com";
+    var marks;
+
+    for (var i = 0; i < result.length; i++) {
+        if (result[i].emailId === targetEmail) {
+            marks = result[i].subjects;
+            break;
+        }
+    }
+
+   
+    console.log("Marks for", targetEmail + ":", marks);
+
+</script>
+
+</html>

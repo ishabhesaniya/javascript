@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Find the second index data of the result</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <h2>Two Date Print</h2>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+</body>
+<script>
+     result = [
+        {
+            Id: "62cb82b136bb23650d33c90",
+            firstname: "Reema",
+            lastname: "Maheta",
+            emailId: "reemamaheta@google.com",
+            birthdate: '29 - 02 - 2002',
+            image: "",
+            subjects: {
+                mathematics: 68,
+                science: 84,
+                gujarati: 95,
+                socialscience: 76,
+                english: 85
+            }
+        },
+        {
+            Id: "62cb82b136bb23650d33c90",
+            firstname: "Maya",
+            lastname: "Thakur",
+            emailId: "mayathakur@google.com",
+            birthdate: '30-02-2002',
+            image: [
+                1,
+                {
+                    "aaa": "aaaa",
+                    "bbb": "bbbb",
+                    "ccc": "cccc"
+                },
+                2, 3, {
+                mathematics: 61,
+                science: 95,
+                gujarati: 54,
+                socialscience: ["a","b","c"],
+                english: 84
+            }
+            ],
+            subjects: {
+                mathematics: 62,
+                science: 84,
+                gujarati: 65,
+                socialscience: 74,
+                english: 95
+            }
+        },
+        {
+            Id: "62cb82b136bb23650d33c90",
+            firstname: "Malhar",
+            lastname: "Vyas",
+            emailId: "malharvyas@google.com",
+            birthdate: '28- 02 -2002',
+            image: [
+                1,
+                {
+                    fname: "isha",
+                    lname:"bhesaniya"
+                },
+                2,
+                
+                    {
+                        sname:"Kuvariya"
+                    },
+                    3
+                    
+                
+            ],
+                subjects: {
+                mathematics: 61,
+                science: 95,
+                gujarati: 54,
+                socialscience: 55,
+                english: 84
+            },
+            Total: [ { 
+                aa:50,
+                bb:60
+            }
+        ]
+        }
+    ]
+
+    document.getElementById("demo").innerHTML = result;
+    const a= result[1];
+    let b= JSON.stringify(a);
+    document.getElementById("demo1").innerHTML ="Second Index Data :" + result[1].image[1].ccc;
+
+    console.log("Second", result);
+    console.log("Second", result[1].image[1].ccc);
+    console.log("Third",result[2].subjects.english)
+    console.log("one",result[0].birthdate + "<br>" + result[1].birthdate)
+    console.log("3",result[2].image[1].fname + " "+ result[2].image[1].lname)
+    console.log("third",result[2].image[3].sname)
+    console.log("third",result[2].image[4])
+    console.log("all lastname and fristname",result[0].firstname + " " + result[0].lastname)
+    console.log("second index subject",result[2].subjects.gujarati)
+    console.log("index",result[2].Total[0].bb)
+    console.log("zero index mark: " ,result[0].subjects)
+    console.log("fullname",result.map(getFullName))
+    console.log(" malharvyas@google.com.",result[2].subjects)
+   
+      document.getElementById("demo6").innerHTML=result[2].subjects;
+
+      let user =result.filter((bk) =>bk.birthdate)
+      console.log(user); 
+
+      let user1 =result.filter((bk) =>bk.subjects)
+      console.log(user); 
+      
+      result.forEach(person => {
+const { subjects } = person;
+    console.log(subjects);
+});
+
+function getGrade(percentage) {
+    if (percentage >= 90) {
+        return 'A';
+    } else if (percentage >= 80) {
+        return 'B';
+    } else if (percentage >= 70) {
+        return 'C';
+    } else if (percentage >= 60) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+}
+
+result.forEach(person => {
+    const { firstname, lastname, subjects } = person;
+
+    // Calculate the average percentage for subjects
+    const totalSubjects = Object.keys(subjects).length;
+    const totalMarks = Object.values(subjects).reduce((acc, mark) => acc + mark, 0);
+    const averagePercentage = totalMarks / totalSubjects;
+
+    // Get the grade based on the average percentage
+    const grade = getGrade(averagePercentage);
+
+    console.log(`${firstname} ${lastname} - Average Percentage: ${averagePercentage.toFixed(2)}% - Grade: ${grade}`);
+});
+
+ 
+
+    document.getElementById("demo4").innerHTML = result.map(getFullName);
+
+      function getFullName(item) {
+      return [item.firstname,item.lastname].join(" ");
+      }
+
+      let newarray =result.filter(function (el){
+    return el.subjects <= 95;
+
+});     
+console.log(newarray);  
+
+     document.getElementById("demo1").innerHTML="Second Index Data:"+secondIndexData;
+
+    const names = result.map(student => `${student.firstname} ${student.lastname}`);
+    console.log("Names of all students:", names);
+
+
+    const x= result[1];
+    let y= JSON.stringify(x);
+    document.getElementById("demo2").innerHTML ="Second Index Data :" +result[2].image[1].fname + " "+ result[2].image[1].lname;
+
+    const z= result;
+    let u= JSON.stringify(z);
+    document.getElementById("demo3").innerHTML ="Second Index Data :" + result[0].birthdate + "<br>" + result[1].birthdate ;
+    
+
+</script>
+
+</html>

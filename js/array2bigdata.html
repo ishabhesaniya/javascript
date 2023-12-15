@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Filter Function</h2>
+    <p id="demo"></p>
+</body>
+<script>
+    let obj = {
+    'Students': [{
+        "name": "Raj",
+        "Age": "15",
+        "RollNumber": "123",
+        "Marks": "99",
+ 
+    }, {
+        "name": "Aman",
+        "Age": "14",
+        "RollNumber": "223",
+        "Marks": "69",
+    },
+    {
+        "name": "Vivek",
+        "Age": "13",
+        "RollNumber": "253",
+        "Marks": "89",
+    },
+    ]
+};
+
+let newarray =obj.Students.filter(function (el){
+    return el.Age >= 5 &&
+    el.RollNumber <=200;
+
+});     
+console.log(newarray);  
+
+document.getElementById("demo").innerHTML=obj.newarray;
+</script>
+</html>
