@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2>Find the second index data of the result</h2> 
+   <p id="demo"></p>
+
+   
+</body>
+<script>
+    result = [
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Reema",
+        lastname: "Maheta",
+        emailId: "reemamaheta@google.com",
+        birthdate: '29 - 02 - 2002',
+        image: "",
+        subjects: {
+            mathematics: 68,
+            science: 84,
+            gujarati: 95,
+            socialscience: 76,
+            english: 85
+        }
+    },
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Maya",
+        lastname: "Thakur",
+        emailId: "mayathakur@google.com",
+        birthdate: '30 - 02 - 2002',
+        image: "",
+        subjects: {
+            mathematics: 62,
+            science: 84,
+            gujarati: 65,
+            socialscience: 74,
+            english: 95
+        }
+    },
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Malhar",
+        lastname: "Vyas",
+        emailId: "malharvyas@google.com",
+        birthdate: '28 - 02 - 2002',
+        image: "",
+        subjects: {
+            mathematics: 61,
+            science: 95,
+            gujarati: 54,
+            socialscience: 55,
+            english: 84
+        }
+    }
+]
+
+document.write(result[2].Id + "<br>" + result[2].firstname + "<br>" +result[2].lastname + "<br>" + 
+result[2].emailId + "<br>" + result[2].birthdate + "<br>" +result[2].image + "<br>" + result[2].subjects.mathematics
++ "<br>" + result[2].subjects.science + "<br>" + result[2].subjects.gujarati + "<br>" + result[2].subjects.socialscience
++ "<br>" + result[2].subjects.english)
+
+</script>
+</html>

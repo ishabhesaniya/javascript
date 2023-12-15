@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>map function</h2>
+    <p id="demo"></p>
+</body>
+<script>
+ const arrayOfObjects = [
+  { id: 1, data: { name: 'Alice', age: 25 } },
+  { id: 2, data: { name: 'Bob', age: 30 } },
+  { id: 3, data: { name: 'Charlie', age: 22 } }
+];
+
+// Using map to create a new array by modifying the inner objects
+const newArray = arrayOfObjects.map((item) => {
+  // Destructuring the original object
+  const { id, data } = item;
+
+  // Modifying the inner object
+  const newData = { ...data, age: data.age / 2 };
+
+  // Creating a new object with the modified inner object
+  return { id, data: newData };
+});
+
+console.log(newArray);
+
+
+</script>
+</html>

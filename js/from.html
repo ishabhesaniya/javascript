@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>From Array</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+</body>
+<script>
+    const str ="Isha Bhesaniya";
+    const newarray1 =Array.from(str);
+    console.log(newarray1);
+
+    const num =[1,2,3,4,5,6];
+    const newarray2 =Array.from(num , x => x * 2);
+    console.log(newarray2);
+
+    document.getElementById("demo").innerHTML=newarray1;
+    document.getElementById("demo1").innerHTML=newarray2;
+</script>
+</html>

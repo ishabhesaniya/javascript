@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>reduceRight</h2>
+    <p id="demo"></p>
+</body>
+<script>
+    let numbers = [1, 2, 3, 4, 5, 6];
+
+let sum = numbers.reduceRight(function (previousValue, currentValue) {
+  console.log({ previousValue, currentValue });
+  return previousValue + currentValue;
+});
+
+console.log(`Result:${sum}`);
+
+const numbers1 = [2, 45, 30, 100];
+document.getElementById("demo").innerHTML = numbers.reduceRight(getSum);
+
+function getSum(total, num) {
+  return total - num;
+}
+
+const array = ['one', 'two', 'three', 'four'];
+
+const result = array.reduceRight((accumulator, currentValue) => {
+    return accumulator + ' ' + currentValue;
+}, '');
+
+console.log(result); 
+</script>
+</html>
