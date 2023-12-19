@@ -58,9 +58,14 @@
     <hr>
     <h2>13. departments in employees all Salary displya</h2>
     <p id="demo12"></p>
-
+      
+    <hr>
     <h2>14. departments in employees all Position displya</h2>
     <p id="demo13"></p>
+    
+    <hr>
+    <h2>14. departments in employees all Position displya</h2>
+    <p id="demo14"></p>
 </body>
 <script>
     company = [{
@@ -270,7 +275,7 @@
         const result =[];
         for(const department of companyD[0].departments){
             for (const employee of department.employees){
-                result.push(employee.name);
+                result.push(employee.name,"<br>");
             }
         }
         return result;
@@ -279,11 +284,12 @@
     console.log(allemployename);
     document.getElementById("demo11").innerHTML=allemployename;
 
+    
     function allsal (p){
         const result =[];
         for(const y of p[0].departments){
             for (const emp of y.employees){
-                result.push(emp.salary)
+                result.push(emp.salary ,"<br>")
             }
         }
         return result;
@@ -296,7 +302,7 @@
         const result =[];
         for(const z of l[0].departments){
             for (const emp of z.employees){
-                result.push(emp.position)
+                result.push(emp.position, "<br>")
             }
         }
         return result;
@@ -304,7 +310,34 @@
     const getpos = allpos(company);
     console.log("All Employees Salary",getpos);
     document.getElementById("demo13").innerHTML=getpos;
+    
+    //Filter data in maxmum value
+    const aaaa =company[0].departments[0].employees.filter(
+        function (bb){
+            return bb.salary <=100000;
+        }
+    )
+    console.log("salary ",aaaa);
 
-</script>
+    //Filter all data in maxmum value
+   var pt = company[0].departments.flatMap(
+    function(fil){
+        return fil.employees.filter(
+            function (f){
+                return f.salary <= 100000;
+            }
+        )
+    }
+   )
+   console.log("salary all",pt);
+   
+   var p =company[0].departments[4].employees.filter(
+    function (t){
+        return t.salary <=50000
+    }
+   )
+   console.log("4 index Salary",p);
+
+</script> 
 
 </html>

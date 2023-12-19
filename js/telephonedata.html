@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>All Name Display</h2>
+    <p id="demo"></p>
+    <hr>
+
+    <h2>All Email Display</h2>
+    <p id="demo1"></p>
+    <hr>
+</body>
+<script>
+    var defaultArray = [
+    {
+         Name: "Tom Miller",
+         emails: [
+             {primary: "tom12@test.com"},
+             {secondary: "t123@test.com"}
+        ],
+         phones: [
+             {fax: 2365147892},
+             {home: 2361459325},
+             {mobile: 1253697412},
+             {work: 3698521477}
+        ]
+    },
+    {
+         Name: "Bud Light",
+         emails: [
+             {primary: "bud12@test.com"},
+             {secondary: "b123@test.com"}
+        ],
+         phones: [
+             {fax: 1239874562},
+             {home: 78932145691},
+             {mobile: 23659874128},
+             {work: 1254789863}
+        ]
+    },
+    {
+         Name: "Ram Shrma",
+         emails: [
+             {primary: "ram12@test.com"},
+             {secondary: "r123@test.com"}
+        ],
+         phones: [
+             {fax: 9632587412},
+             {home: 7946132589},
+             {mobile: 8523697423},
+             {work: 159753642}
+        ]
+    },
+    {
+         Name: "Sita Shrma",
+         emails: [
+             {primary: "sita12@test.com"},
+             {secondary: "s123@test.com"}
+        ],
+         phones: [
+             {fax: 7539514628},
+             {home: 1239874562},
+             {mobile: 168793245},
+             {work: 3698521456}
+        ]
+    },
+    {
+         Name: "Laxman Shrma",
+         emails: [
+             {primary: "laxman12@test.com"},
+             {secondary: "l123@test.com"}
+        ],
+         phones: [
+             {fax: 80005390236},
+             {home: 9510358206},
+             {mobile: 9872563142},
+             {work: 9658743120}
+        ]
+    }
+]
+
+
+//All name Display
+var aap = defaultArray.map(
+    function (bb){
+        return bb.Name
+    }
+)
+console.log("All Name Print",aap)
+document.getElementById("demo").innerHTML=aap ;
+
+//All Email Display
+var result =defaultArray[1].emails.map(
+    function (aa){
+        return [aa.primary,aa.secondary]
+    }
+)
+console.log("All Email Display",result);
+
+document.getElementById("demo1").innerHTML=result;
+
+
+</script>
+</html>
