@@ -1,0 +1,8 @@
+{
+    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+    "livePreview.customExternalBrowser": "Chrome",
+    "livePreview.autoRefreshPreview": "On Changes to Saved Files",
+    "liveServer.settings.useWebExt": true,
+    "liveServer.settings.useLocalIp": true,
+    "livePreview.debugOnExternalPreview": true
+}
